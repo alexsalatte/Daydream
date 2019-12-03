@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="todo"
+            type="com.example.daydream.database.Todo" />
+        <variable
+            name="clickListener"
+            type="com.example.daydream.todo.TodoListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(todo)}">
+
+        <ImageView
+            android:id="@+id/todo_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:src="@drawable/pug"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/todo_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_large"
+            app:todoTitleFormatted="@{todo}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/todo_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/fake_title" />
+
+        <TextView
+            android:id="@+id/todo_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:todoDetailsFormatted="@{todo}"
+            app:layout_constraintEnd_toEndOf="@id/todo_title"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/todo_title"
+            app:layout_constraintTop_toBottomOf="@+id/todo_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="@string/fake_details" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

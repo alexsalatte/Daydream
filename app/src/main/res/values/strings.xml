@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Daydream</string>
+
+    <string name="hint_edit">What is your dream!?</string>
+    <string name="hint_details">Tell me your secrets!</string>
+
+    <string name="text_add">Add</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_clear">Clear</string>
+
+    <string name="fake_title">I want to be Comfy!</string>
+    <string name="fake_details">
+        Hello, I like to be warm and comfy and eat yummy foods.
+        I like to wrap myself in blankets when its warm.
+        This is great after a nice relaxing shower.
+        I like to eat lots of yummy foods to.
+        Just don\'t eat them in bed or you\'ll make a mess
+    </string>
+
+    <string name="cleared_message">Your data is gone forever!</string>
+</resources>
